@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background animation</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container{
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(240deg, red,purple,orange,yellow);
+      /* Important. Pay attention */
+      background-size: 200%;
+      animation: bg-animation;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+    }
+    .text{
+      font-size: 2rem;
+      letter-spacing: 1rem;
+      text-transform: uppercase;
+      color: darkslategray;
+    }
+    @keyframes bg-animation{
+      0%{
+        background-position: left center;
+      }
+      100%{
+        background-position: right center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p class="text">Background Animation</p>
+  </div>
+</body>
+</html>
